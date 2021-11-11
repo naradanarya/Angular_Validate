@@ -1,0 +1,15 @@
+<div class="container pt-5">
+  <div class="row justify-content-sm-center pt-5">
+      <div class="col-sm-6 shadow round pb-3">
+        <h1 class="text-center pt-3 text-secondary">Example Form</h1>
+          <form [formGroup]="exform">
+              <div class="form-group">
+                <label class="col-form-label">Email:</label>
+                <input formControlName="email" type="email" class="form-control" >
+                <small *ngIf="email.invalid && email.touched" class="text-danger">format email yang anda masukan salah</small>  
+                <small *ngIf="email.valid || email.untouched " >Contoh: email@astrapay.com</small></div>
+              <button (click)="clicksub()" [disabled]="exform.invalid" type="button" class="btn btn-primary">Send message</button>
+            </form>
+      </div>
+  </div>
+</div>
